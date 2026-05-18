@@ -50,6 +50,28 @@ namespace Materias.Ejemplo1
             }
         }
 
+        public float Parcial3
+        {
+            get { return parcial3; }
+            set
+            {
+                if (value >= 0 && value <= 10)
+                {
+                    parcial3 = value;
+                }
+                else
+                {
+                    parcial3 = -1;
+                }
+            }
+        }
+
+        public string NombreMateria
+        {
+            get { return nombreMateria; }
+            set { nombreMateria = value; }
+        }
+
         //definimos el/los metodos  utilizar en nuestro ejercicio
         public float CalculaPromedio()
         {
