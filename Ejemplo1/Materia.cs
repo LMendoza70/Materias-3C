@@ -17,7 +17,7 @@ namespace Materias.Ejemplo1
         private float parcial1;
         private float parcial2;
         private float parcial3;
-        private string nombreMateria;
+        public string nombreMateria;
 
         //definimos las propiedades de nuestro ejemplo
         public float Parcial1
@@ -66,11 +66,29 @@ namespace Materias.Ejemplo1
             }
         }
 
-        public string NombreMateria
+        //Constructor 
+        //vacio
+        public Materia()
+        {
+            parcial1 = 0;
+            parcial2 = 0;
+            parcial3 = 0;
+            nombreMateria = "";
+        }
+        //constructor parametrizado
+        public Materia(string nombre, float parcial1, float parcial2, float parcial3)
+        {
+            nombreMateria= nombre;
+            this.parcial1 = parcial1;
+            this.parcial2 = parcial2;
+            this.parcial3 = parcial3;
+        }
+
+        /*public string NombreMateria
         {
             get { return nombreMateria; }
             set { nombreMateria = value; }
-        }
+        }*/
 
         //definimos el/los metodos  utilizar en nuestro ejercicio
         public float CalculaPromedio()
@@ -78,6 +96,14 @@ namespace Materias.Ejemplo1
             float resultado = 0f;
             resultado = (parcial1 + parcial2 + parcial3) / 3;
             return resultado;
+        }
+
+        public string Imoresion()
+        {
+            return "Esta es la materia : " + nombreMateria + " y sus calificaciones son \n" +
+                "Parcial 1 :  " + parcial1 + "\n" +
+                "Parcial 2 :  " + parcial2 + "\n" +
+                "parcial 3 :  " + parcial3; 
         }
     }
 }
