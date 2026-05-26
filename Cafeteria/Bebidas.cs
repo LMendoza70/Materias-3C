@@ -63,7 +63,7 @@ namespace Materias.Cafeteria
 
         public void Descuento(float descuento)
         {
-            Precio = Precio * (1 - (descuento / 100));
+            Precio = Precio * (1 - (descuento / 100)); 
         }
     }
 }
